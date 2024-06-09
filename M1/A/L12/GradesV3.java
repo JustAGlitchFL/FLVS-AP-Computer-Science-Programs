@@ -6,7 +6,7 @@ The purpose of this program is to calculate points and average grades for test s
  */
 
  package M1.A.L12;
- public class GradesV2
+ public class GradesV3
  {
      public static void main(String[ ] args)
      {
@@ -20,54 +20,54 @@ The purpose of this program is to calculate points and average grades for test s
         testGrade = 95;
         totalPoints+=testGrade;
         average= (double) totalPoints/ (double) numTests;
-        System.out.println("Test #1\tTest Grade: "+testGrade+"\tTotal Points: "+totalPoints+"\tAverage Score: "+average);
+        System.out.println("Test #"+numTests+"\tTest Grade: "+testGrade+"\tTotal Points: "+totalPoints+"\tAverage Score: "+average);
 
         numTests++;
         testGrade = 73;
         totalPoints+=testGrade;
         average=(double) totalPoints/ (double) numTests;
-        System.out.println("Test #1\tTest Grade: "+testGrade+"\tTotal Points: "+totalPoints+"\tAverage Score: "+average);
+        System.out.println("Test #"+numTests+"\tTest Grade: "+testGrade+"\tTotal Points: "+totalPoints+"\tAverage Score: "+average);
 
         numTests++;
         testGrade = 91;
         totalPoints+=testGrade;
         average=(double) totalPoints/ (double) numTests;
-        System.out.println("Test #1\tTest Grade: "+testGrade+"\tTotal Points: "+totalPoints+"\tAverage Score: "+average);        
+        System.out.println("Test #"+numTests+"\tTest Grade: "+testGrade+"\tTotal Points: "+totalPoints+"\tAverage Score: "+average);        
         
         numTests++;
         testGrade = 82;
         totalPoints+=testGrade;
         average=(double) totalPoints/ (double) numTests;
-        System.out.println("Test #1\tTest Grade: "+testGrade+"\tTotal Points: "+totalPoints+"\tAverage Score: "+average);
+        System.out.println("Test #"+numTests+"\tTest Grade: "+testGrade+"\tTotal Points: "+totalPoints+"\tAverage Score: "+average);
 
         numTests++;
         testGrade = 99;
         totalPoints+=testGrade;
         average=(double) totalPoints/ (double) numTests;
-        System.out.println("Test #1\tTest Grade: "+testGrade+"\tTotal Points: "+totalPoints+"\tAverage Score: "+average);
+        System.out.println("Test #"+numTests+"\tTest Grade: "+testGrade+"\tTotal Points: "+totalPoints+"\tAverage Score: "+average);
 
         numTests++;
         testGrade = 100;
         totalPoints+=testGrade;
         average=(double) totalPoints/ (double) numTests;
-        System.out.println("Test #1\tTest Grade: "+testGrade+"\tTotal Points: "+totalPoints+"\tAverage Score: "+average);
+        System.out.println("Test #"+numTests+"\tTest Grade: "+testGrade+"\tTotal Points: "+totalPoints+"\tAverage Score: "+average);
 
         numTests++;
         testGrade = 93;
         totalPoints+=testGrade;
         average=(double) totalPoints/ (double) numTests;
-        System.out.println("Test #1\tTest Grade: "+testGrade+"\tTotal Points: "+totalPoints+"\tAverage Score: "+average);
+        System.out.println("Test #"+numTests+"\tTest Grade: "+testGrade+"\tTotal Points: "+totalPoints+"\tAverage Score: "+average);
 
         numTests++;
         testGrade = 65;
         totalPoints+=testGrade;
         average=(double) totalPoints/ (double) numTests;
-        System.out.println("Test #1\tTest Grade: "+testGrade+"\tTotal Points: "+totalPoints+"\tAverage Score: "+average);
+        System.out.println("Test #"+numTests+"\tTest Grade: "+testGrade+"\tTotal Points: "+totalPoints+"\tAverage Score: "+average);
 
         numTests++;
         testGrade = 87;
         totalPoints+=testGrade;
         average=(double) totalPoints/ (double) numTests;
-        System.out.println("Test #1\tTest Grade: "+testGrade+"\tTotal Points: "+totalPoints+"\tAverage Score: "+average);
+        System.out.println("Test #"+numTests+"\tTest Grade: "+testGrade+"\tTotal Points: "+totalPoints+"\tAverage Score: "+average);
      }//end of main method
  }//end of class
