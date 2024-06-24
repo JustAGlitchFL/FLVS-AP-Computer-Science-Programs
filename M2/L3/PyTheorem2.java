@@ -1,17 +1,16 @@
 /*
 * This program calculates the hypotenuse of two right triangles using the Pythagorean Theorem.
 * @author Aidan Procopio
-* @version 6/23/24
+* @version 6/24/24
 */
 
-
-public class PyTheorem {
+public class PyTheorem2 {
 
     public static void main(String[] args) {
-        double floor = 5;
-        double ceiling = 23;
-        double a = (ceiling - floor) * Math.random() + floor;
-        double b = (ceiling - floor) * Math.random() + floor;
+        int floor = 5;
+        int ceiling = 22;
+        int a = (ceiling - floor) * Math.random() + floor;
+        int b = (ceiling - floor) * Math.random() + floor;
 
         double c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
 
