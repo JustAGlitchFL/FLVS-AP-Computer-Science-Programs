@@ -15,6 +15,9 @@ public class smartphonepurchases {
         String firstname = in.next();
         String lastname = in.nextLine();
         Char firstinitial = (char) firstname.substring(0,1);
-        System.out.println(firstinitial)
+        System.out.println(firstinitial);
+
+        System.out.println();
+        Syste
     }
 }
