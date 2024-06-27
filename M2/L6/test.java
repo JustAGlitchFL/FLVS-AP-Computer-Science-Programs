@@ -1,6 +1,13 @@
 public class test {    
     public static void main(String[] args) {
-        String str = "Java Rocks!";
-        System.out.println(str.length());
+
+        
+        double fact1 = 1 / 2;
+
+        double fact2 = 3 * 4;
+        
+        double product = fact1 * fact2;
+        
+        System.out.println(product);
     }
 }
