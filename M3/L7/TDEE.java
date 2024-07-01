@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class TDEE {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -18,35 +19,60 @@ public class TDEE {
         System.out.println("[F] Extremely Active (Full-time Athlete, Heavy Manual Labor)");
         
         System.out.print("Enter the letter corresponding to your activity level: ");
-        char activity = in.nextLine().charAt(0);
+        String activity = in.nextLine().substring(0, 1);
 
         double afactor = 0.0;
 
-        if activity == 'A' || activity == 'a') {
-            afactor = 1.2;
-        } else if (activity == 'B' || activity == 'b') {
-            afactor = 1.3;
-        } else if (activity == 'C' || activity == 'c') {
-            afactor = 1.4;
-        } else if (activity == 'D' || activity == 'd') {
-            afactor = 1.5;
-        } else if (activity == 'E' || activity == 'e') {
-            afactor = 1.6;
-        } else if (activity == 'F' || activity == 'f') {
-            afactor = 1.7;
+        if (activity.equals("A") || activity.equals("a")) {
+            if (sex == 'M' || sex == 'm') {
+                afactor = 1.0;
+            }else if (sex == 'F' || sex == 'f'){
+                afactor = 1.0;
+            }
+        } else if (activity.equals("B") || activity.equals("b")) {
+            if (sex == 'M' || sex == 'm') {
+                afactor = 1.0;
+            }else if (sex == 'F' || sex == 'f'){
+                afactor = 1.0;
+            }
+        } else if (activity.equals("C") || activity.equals("c")) {
+            if (sex == 'M' || sex == 'm') {
+                afactor = 1.0;
+            }else if (sex == 'F' || sex == 'f'){
+                afactor = 1.0;
+            }
+        } else if (activity.equals("D") || activity.equals("d")) {
+            if (sex == 'M' || sex == 'm') {
+                afactor = 1.0;
+            }else if (sex == 'F' || sex == 'f'){
+                afactor = 1.0;
+            }
+        } else if (activity.equals("E") || activity.equals("e")) {
+            if (sex == 'M' || sex == 'm') {
+                afactor = 1.0;
+            }else if (sex == 'F' || sex == 'f'){
+                afactor = 1.0;
+            }
+        } else if (activity.equals("F") || activity.equals("f")) {
+            if (sex == 'M' || sex == 'm') {
+                afactor = 1.0;
+            }else if (sex == 'F' || sex == 'f'){
+                afactor = 1.0;
+            }
         } else {
             System.out.println("Invalid activity level");
         }
 
         double tdee = bmr * afactor;
         // Nearest 10th
-        double tdee = (int)((tdee * 10) + 0.5) / 10.0;
+        tdee = (int)((tdee * 10) + 0.5) / 10.0;
 
         // Printing
         System.out.println("\nYour results:");
         System.out.println("Name: " + name);
-        System.out.println("Sex: " + sex)
+        System.out.println("Sex: " + sex);
         System.out.println("BMR: " + bmr + " calories");
         System.out.println("Activity Factor: " + afactor);
         System.out.println("TDEE: " + tdee + " calories");
     }
+}
