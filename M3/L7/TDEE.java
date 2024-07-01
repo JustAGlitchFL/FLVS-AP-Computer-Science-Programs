@@ -18,7 +18,7 @@ public class TDEE {
         System.out.println("[E] Very Active (Team Sports, Hard Manual Labor)");
         System.out.println("[F] Extremely Active (Full-time Athlete, Heavy Manual Labor)");
         
-        System.out.print("Enter the letter corresponding to your activity level: ");
+        System.out.print("\nEnter the letter corresponding to your activity level: ");
         String activity = in.nextLine().substring(0, 1);
 
         double afactor = 0.0;
@@ -31,33 +31,33 @@ public class TDEE {
             }
         } else if (activity.equals("B") || activity.equals("b")) {
             if (sex == 'M' || sex == 'm') {
-                afactor = 1.0;
+                afactor = 1.3;
             }else if (sex == 'F' || sex == 'f'){
-                afactor = 1.0;
+                afactor = 1.3;
             }
         } else if (activity.equals("C") || activity.equals("c")) {
             if (sex == 'M' || sex == 'm') {
-                afactor = 1.0;
+                afactor = 1.6;
             }else if (sex == 'F' || sex == 'f'){
-                afactor = 1.0;
+                afactor = 1.5;
             }
         } else if (activity.equals("D") || activity.equals("d")) {
             if (sex == 'M' || sex == 'm') {
-                afactor = 1.0;
+                afactor = 1.7;
             }else if (sex == 'F' || sex == 'f'){
-                afactor = 1.0;
+                afactor = 1.6;
             }
         } else if (activity.equals("E") || activity.equals("e")) {
             if (sex == 'M' || sex == 'm') {
-                afactor = 1.0;
+                afactor = 2.1;
             }else if (sex == 'F' || sex == 'f'){
-                afactor = 1.0;
+                afactor = 1.9;
             }
         } else if (activity.equals("F") || activity.equals("f")) {
             if (sex == 'M' || sex == 'm') {
-                afactor = 1.0;
+                afactor = 2.4;
             }else if (sex == 'F' || sex == 'f'){
-                afactor = 1.0;
+                afactor = 2.2;
             }
         } else {
             System.out.println("Invalid activity level");
