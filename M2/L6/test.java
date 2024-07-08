@@ -2,8 +2,8 @@ import java.util.Scanner;
 public class test {
     public static void main(String[] args) {
         
-        int num = 5;
-        num += 20;
-        System.out.println(num);
+        String word1 = "busy";
+        String word2 = "be";
+        System.out.println(word2.compareTo(word1));
     }
 }
