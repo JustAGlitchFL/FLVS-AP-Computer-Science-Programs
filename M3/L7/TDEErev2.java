@@ -5,7 +5,7 @@
  */
 
 import java.util.Scanner;
-public class TDEE {
+public class TDEErev2 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.print("Enter your first and last name: ");
