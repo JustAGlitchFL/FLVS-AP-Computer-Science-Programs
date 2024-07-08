@@ -29,34 +29,26 @@ public class TDEE {
 
         double afactor = 0.0;
 
-        if (activity.equals("A") || activity.equals("a")) {
+        if (activity.equalsIgnoreCase("a")) {
             afactor = 1.0;
-        } else if (activity.equals("B") || activity.equals("b")) {
+        } else if (activity.equalsIgnoreCase("b")) {
             afactor = 1.3;
-        } else if (activity.equals("C") || activity.equals("c")) {
-            if (sex.equals("M") || sex.equals("m")) {
-                afactor = 1.6;
-            } else if (sex.equals("F") || sex.equals("f")) {
-                afactor = 1.5;
-            }
-        } else if (activity.equals("D") || activity.equals("d")) {
-            if (sex.equals("M") || sex.equals("m")) {
-                afactor = 1.7;
-            } else if (sex.equals("F") || sex.equals("f")) {
-                afactor = 1.6;
-            }
-        } else if (activity.equals("E") || activity.equals("e")) {
-            if (sex.equals("M") || sex.equals("m")) {
-                afactor = 2.1;
-            } else if (sex.equals("F") || sex.equals("f")) {
-                afactor = 1.9;
-            }
-        } else if (activity.equals("F") || activity.equals("f")) {
-            if (sex.equals("M") || sex.equals("m")) {
-                afactor = 2.4;
-            } else if (sex.equals("F") || sex.equals("f")) {
-                afactor = 2.2;
-            }
+        } else if (activity.equalsIgnoreCase("c") && sex.equalsIgnoreCase("m")) {
+            afactor = 1.6;
+        } else if (activity.equalsIgnoreCase("c") && sex.equalsIgnoreCase("f")) {
+            afactor = 1.5;
+        } else if (activity.equalsIgnoreCase("d") && sex.equalsIgnoreCase("m")) {
+            afactor = 1.7;
+        } else if (activity.equalsIgnoreCase("d") && sex.equalsIgnoreCase("f")) {
+            afactor = 1.6;
+        } else if (activity.equalsIgnoreCase("e") && sex.equalsIgnoreCase("m")) {
+            afactor = 2.1;
+        } else if (activity.equalsIgnoreCase("e") && sex.equalsIgnoreCase("f")) {
+            afactor = 1.9;
+        } else if (activity.equalsIgnoreCase("f") && sex.equalsIgnoreCase("m")) {
+            afactor = 2.4;
+        } else if (activity.equalsIgnoreCase("f") && sex.equalsIgnoreCase("f")) {
+            afactor = 2.2;
         } else {
             System.out.println("Invalid activity level");
         }
