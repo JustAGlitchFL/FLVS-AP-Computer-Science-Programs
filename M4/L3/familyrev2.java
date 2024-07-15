@@ -9,7 +9,7 @@
 import java.util.Scanner;
 import java.io.File;
 import java.io.IOException;
-public class family
+public class familyrev2
 {
     public static void main(String[] args) throws IOException
     {
@@ -21,22 +21,27 @@ public class family
         int gb = 0;
         int total = 0;
 
-        while (inFile.hasNextLine())
+        while (inFile.hasNext())
         {
-            token = inFile.nextLine();
+            token = inFile.next();
             if (token.equalsIgnoreCase("bb")){
                 bb++;
             }else if (token.equalsIgnoreCase("gg")){
                 gg++;
             }else if (token.equalsIgnoreCase("gb") || token.equalsIgnoreCase("bg")){
                 gb++;
-            } 
+            }
             total++;
         }
         inFile.close();
-        int bbPercent = (bb * 100) / total;
-        int ggPercent = (gg * 100) / total;
-        int gbPercent = (gb * 100) / total;
+        double bbPercent = (bb * 100.000) / total;
+        double ggPercent = (gg * 100.000) / total;
+        double gbPercent = (gb * 100.000) / total;
+
+        //rounding to 2 decimal places
+        bbPercent = (int)(bbPercent * 100.0 + 0.5) / 100.0;
+        ggPercent = (int)(ggPercent * 100.0 + 0.5) / 100.0;
+        gbPercent = (int)(gbPercent * 100.0 + 0.5) / 100.0;
 
         System.out.println("Composition statistics for families with two children:");
         System.out.println("\nTotal number of families: " + total);
