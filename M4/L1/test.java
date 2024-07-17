@@ -2,10 +2,13 @@ package M4.L1;
 
 public class test {
     public static void main(String[] args) {
-        String phone ="1234567890";
-        System.out.println(phone.substring(6,9));
-        System.out.println(phone.substring(6));
-        System.out.println(phone.substring(6,10));
-
+        for(int outer = 0; outer < 5; outer += 2)
+        {
+            for(int inner = 0; inner < outer + 1; inner++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 }
