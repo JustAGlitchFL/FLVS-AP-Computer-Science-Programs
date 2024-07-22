@@ -2,13 +2,19 @@ package M4.L1;
 
 public class test {
     public static void main(String[] args) {
-        for(int outer = 0; outer < 5; outer += 2)
+        String head = "construction";
+        String tail = "";
+        if ( head.length() > 5 && "building".compareTo( head ) < 0 )
         {
-            for(int inner = 0; inner < outer + 1; inner++)
-            {
-                System.out.print("*");
-            }
-            System.out.println();
+          tail = head.substring( 5 );
+          head = head.substring( 0, 5 );
+           
+          if ( tail.length() > 5 && "traction".compareTo( tail ) < 0 )
+          {
+            head += tail.substring( 0, 5 );
+            tail = tail.substring( 5 );
+          }
         }
-    }
+        System.out.println( tail );
+}
 }
