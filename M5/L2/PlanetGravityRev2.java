@@ -5,7 +5,7 @@ package M5.L2;
  * @author Aidan Procopio
  * @version 07/22/2024
  */
-public class PlanetGravity {
+public class PlanetGravityRev2 {
     public static void printheader() {
         System.out.println("\t\t\t\tPlanetary Data");
         System.out.println("\tPlanet\t\tDiameter (km)\t\tMass (kg)\t\tg (m/s^2)");
@@ -21,7 +21,7 @@ public class PlanetGravity {
     }
 
     public static void printdata(String planetname, double diameterkm, double masskg, double g) {
-        System.out.println("\t" + planetname + "\t\t" + diameterkm + "\t\t\t" + masskg + "\t" + g);
+        System.out.println("\t" + planetname + "\t\t" + diameterkm + "\t\t\t" + masskg + "\t\t" + ((int)(g * 100.0)/100.0));
     }
     public static void main(String[] args) {
         String planetname = "Mars";
