@@ -62,14 +62,14 @@ public class FormattingNumericValues
         */
 
         //Formatting double values
-        /*
+        
         System.out.println(".........1.........2.........3.........4.........5");
         System.out.printf("%f\n",3.141592654);
         System.out.printf("%9f\n",3.141592654);
         System.out.printf("%12.9f\n",3.141592654);
         System.out.printf("%15.4f\n",3.141592654);
         System.out.println();
-        */
+        
 
         //Formatting String and numeric values together
         /*

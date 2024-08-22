@@ -7,13 +7,13 @@ package M6.L2;
  * @version Today
  */
 
-public class CityWeatherV1 {
+public class CityWeatherV2 {
     // private instance variables - three arrays
     private String [] months = new String[12];
     private double [] temp = new double[12];
     private double [] precip = new double[12];
     // constructor with parameters
-    public CityWeatherV1(String [] months, double [] temp, double [] precip)
+    public CityWeatherV2(String [] months, double [] temp, double [] precip)
     {
         this.months = months;
         this.temp = temp;
@@ -66,8 +66,15 @@ public class CityWeatherV1 {
     }
     // method to calculate temperature in Celsius (current index of temperature array passed as a parameter) - to be completed in 6.02
     
-    
+    public double tempInCelsius(int index)
+    {
+        return (temp[index] - 32) * (5.0 / 9.0);
+    }
     // method to calculate precipitation in centimeters (current index of precipitation array passed as a parameter) - to be completed in 6.02
+    public double precipInCentimeters(int index)
+    {
+        return precip[index] * 2.54;
+    }
 
 
 }
