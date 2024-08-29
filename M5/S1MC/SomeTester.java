@@ -4,10 +4,15 @@ public class SomeTester
 {
    public static void main (String[] args)
    {
-     int x = 10;
-     int y = 20;
-     SomeClass z = new SomeClass(x, y);
-     z.m2();
-     z.m1();
+      String[] mascots = { "Knights", "Seminoles", "Bulls", "Gators" };
+      int n = -1;
+      String str = "";
+      
+      for (String m : mascots)
+      {
+        n = m.indexOf("o") + 2;
+        str += m.substring(n);
+      }
+      System.out.println(str);
    }
 }

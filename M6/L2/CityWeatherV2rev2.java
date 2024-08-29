@@ -1,19 +1,18 @@
-
 package M6.L2;
 /**
  * Annual Weather object class
  * 
- * @author APCS Team
- * @version Today
+ * @author Aidan Procopio
+ * @version 8/22/24
  */
 
-public class CityWeatherV2 {
+public class CityWeatherV2rev2 {
     // private instance variables - three arrays
     private String [] months = new String[12];
     private double [] temp = new double[12];
     private double [] precip = new double[12];
     // constructor with parameters
-    public CityWeatherV2(String [] months, double [] temp, double [] precip)
+    public CityWeatherV2rev2(String [] months, double [] temp, double [] precip)
     {
         this.months = months;
         this.temp = temp;
