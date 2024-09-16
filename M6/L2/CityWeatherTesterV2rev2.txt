@@ -2,11 +2,11 @@ package M6.L2;
 /**
  * Annual Weather client class
  * 
- * @author APCS Team
- * @version Today
+ * @author Aidan Procopio
+ * @version 8/22/24
  */
 import java.util.Scanner;
-public class CityWeatherTesterV2
+public class CityWeatherTesterV2rev2
 {
     
    
@@ -57,7 +57,7 @@ public class CityWeatherTesterV2
         String precipLabel = "";
         
         //instantiate CityWeatherV1 object 
-        CityWeatherV2 jacksonville = new CityWeatherV2(month, temperature, precipitation);
+        CityWeatherV2rev2 jacksonville = new CityWeatherV2rev2(month, temperature, precipitation);
         //print average temperature and total precipitation
         double avgTemp = jacksonville.averageTemp();
         double totalPrecip = jacksonville.totalPrecip();
