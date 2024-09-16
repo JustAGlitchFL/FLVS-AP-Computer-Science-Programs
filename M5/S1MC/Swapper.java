@@ -2,19 +2,18 @@ package M5.S1MC;
 
 public class Swapper
 {
-   private int a, b;
-   public Swapper(int aValue, int bValue)
-   {
-     a = aValue;
-     b = bValue;
-   }
-   public void swap ()
-   {
-     a = b;
-     b = a;
-   }
-   public void print ()
-   {
-     System.out.println("a = " + a + ", and b = " + b);
-   }
+  public static void main(String[] args) {
+    int a = 10;
+    int b = 0;
+    while (a >= 0)
+    {
+        b = 6;
+        while (b <= a)
+        {
+            b++;
+        }
+        a -= b;
+    }
+    System.out.println(b);
+  }
 }
