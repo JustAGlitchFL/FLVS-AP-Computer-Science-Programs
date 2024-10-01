@@ -1,8 +1,9 @@
+package M7.L4;
 /**
  * Purpose:  This class defines a Candidate by its name and number of votes.
  *
- * @author < your name >
- * @version < today's date >
+ * @author Aidan Procopio
+ * @version 9/30/2024
  */
 
 public class Candidate
