@@ -1,4 +1,4 @@
-
+package M2.L8;
 /**
  * This program demonstrates how to accept user input as a String
  * with the next() method, then convert the String into a double value
