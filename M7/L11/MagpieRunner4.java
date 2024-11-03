@@ -4,8 +4,8 @@ package M7.L11;
  *
  * Code adapted from work by Laurie White for the College Board.
  *
- * @author (enter your name)
- * @version (enter today's date)
+ * @author Aidan Procopio
+ * @version 11/2/24
  */
 
 import java.util.Scanner;

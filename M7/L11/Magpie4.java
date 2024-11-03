@@ -8,7 +8,7 @@ package M7.L11;
  * Code adapted from work by Laurie White for the College Board.
  *
  * @author Aidan Procopio
- * @version 10/25/2024
+ * @version 11/2/24
  *
  */
 public class Magpie4
