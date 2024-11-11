@@ -8,7 +8,7 @@ package M7.L11;
  * Code adapted from work by Laurie White for the College Board.
  *
  * @author Aidan Procopio
- * @version 10/25/2024
+ * @version 10/28/2024
  *
  */
 public class Magpie4
@@ -90,7 +90,7 @@ public class Magpie4
         }
         int position = findKeyword (statement, "I want to", 0);
         String restOfStatement = statement.substring(position + 9).trim();
-        return "What would it mean to " + restOfStatement + "?";
+        return "Would you really be happy if you had " + restOfStatement + "?";
     }
 
 
@@ -116,7 +116,7 @@ public class Magpie4
         int positionOfMe = findKeyword (statement, "me", positionOfYou + 3);
 
         String restOfStatement = statement.substring(positionOfYou + 3, positionOfMe).trim();
-        return "What makes you think that I " + restOfStatement + " you?";
+        return "Why do you " + restOfStatement + " me?";
     }
 
     /**
