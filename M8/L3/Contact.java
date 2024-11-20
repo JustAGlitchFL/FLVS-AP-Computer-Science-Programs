@@ -20,7 +20,7 @@ public class Contact {
     }
 
     public String toString() {
-        return name + ", " + relation + ", " + birthday + ", " + phone + ", " + email;
+        return String.format("%s, %s, %s, %s, %s", name, relation, birthday, phone, email);
     }
 
 }
