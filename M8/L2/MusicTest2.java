@@ -16,6 +16,10 @@ public class MusicTest2 {
             System.out.println(song);
         }
     }
+    private static void printHeader() {
+        System.out.println("Title                     Year   Artist");
+        System.out.println("=========================================");
+    }
 /** old search methods
     private static void searchTitle(Music[] songs, String title) {
         System.out.println("Searching for: " + title);
@@ -63,50 +67,101 @@ public class MusicTest2 {
         }
     }
 */
-// selection sorters
-    private static Music[] sortByTitle(Music[] songs) {
-        for (int i = 0; i < songs.length - 1; i++) {
-            int minIndex = i;
-            for (int j = i + 1; j < songs.length; j++) {
-                if (songs[j].getTitle().compareTo(songs[minIndex].getTitle()) < 0) {
-                    minIndex = j;
-                }
+// insertion sorts
+    public static void sortTitle(Music[] songs) {
+        for (int i = 1; i < songs.length; i++) {
+            Music key = songs[i];
+            int j = i - 1;
+            while (j >= 0 && songs[j].getTitle().compareTo(key.getTitle()) > 0) {
+                songs[j + 1] = songs[j];
+                j = j - 1;
             }
-            Music temp = songs[i];
-            songs[i] = songs[minIndex];
-            songs[minIndex] = temp;
+            songs[j + 1] = key;
         }
-        return songs;
     }
-    private static Music[] sortByYear(Music[] songs) {
-        for (int i = 0; i < songs.length - 1; i++) {
-            int minIndex = i;
-            for (int j = i + 1; j < songs.length; j++) {
-                if (songs[j].getYear() < songs[minIndex].getYear()) {
-                    minIndex = j;
-                }
+    public static void sortYear(Music[] songs) {
+        for (int i = 1; i < songs.length; i++) {
+            Music key = songs[i];
+            int j = i - 1;
+            while (j >= 0 && songs[j].getYear() > key.getYear()) {
+                songs[j + 1] = songs[j];
+                j = j - 1;
             }
-            Music temp = songs[i];
-            songs[i] = songs[minIndex];
-            songs[minIndex] = temp;
+            songs[j + 1] = key;
         }
-        return songs;
     }
-    private static Music[] sortByArtist(Music[] songs) {
-        for (int i = 0; i < songs.length - 1; i++) {
-            int minIndex = i;
-            for (int j = i + 1; j < songs.length; j++) {
-                if (songs[j].getArtist().compareTo(songs[minIndex].getArtist()) < 0) {
-                    minIndex = j;
-                }
+    public static void sortArtist(Music[] songs) {
+        for (int i = 1; i < songs.length; i++) {
+            Music key = songs[i];
+            int j = i - 1;
+            while (j >= 0 && songs[j].getArtist().compareTo(key.getArtist()) > 0) {
+                songs[j + 1] = songs[j];
+                j = j - 1;
             }
-            Music temp = songs[i];
-            songs[i] = songs[minIndex];
-            songs[minIndex] = temp;
+            songs[j + 1] = key;
         }
-        return songs;
     }
-// binary searches
+    // binary searches
+    public static int binarySearchTitle(Music[] songs, String title) {
+        printHeader();
+        sortTitle(songs);
+        int high = songs.length;
+        int low = -1;
+        int probe;
+        while (high - low > 1) {
+            probe = (high + low) / 2;
+            if (songs[probe].getTitle().compareTo(title) > 0) {
+                high = probe;
+            } else {
+                low = probe;
+            }
+        }
+        if ((low >= 0) && (songs[low].getTitle().compareTo(title) == 0)) {
+            return low;
+        } else {
+            return -1;
+        }
+    }
+    public static int binarySearchYear(Music[] songs, int year) {
+        printHeader();
+        sortYear(songs);
+        int high = songs.length;
+        int low = -1;
+        int probe;
+        while (high - low > 1) {
+            probe = (high + low) / 2;
+            if (songs[probe].getYear() > year) {
+                high = probe;
+            } else {
+                low = probe;
+            }
+        }
+        if ((low >= 0) && (songs[low].getYear() == year)) {
+            return low;
+        } else {
+            return -1;
+        }
+    }
+    public static int binarySearchArtist(Music[] songs, String artist) {
+        printHeader();
+        sortArtist(songs);
+        int high = songs.length;
+        int low = -1;
+        int probe;
+        while (high - low > 1) {
+            probe = (high + low) / 2;
+            if (songs[probe].getArtist().compareTo(artist) > 0) {
+                high = probe;
+            } else {
+                low = probe;
+            }
+        }
+        if ((low >= 0) && (songs[low].getArtist().compareTo(artist) == 0)) {
+            return low;
+        } else {
+            return -1;
+        }
+    }
 
     public static void main(String[] args) {
         Music[] songs = {new Music("Dreamer", 2022, "Throttle"),
