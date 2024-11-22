@@ -107,63 +107,7 @@ public class MusicTest2 {
         return songs;
     }
 // binary searches
-    private static int searchTitle(Music[] songs, String title) {
-        int high = songs.length;
-        int low = -1;
-        int probe;
 
-        while(high-low>1) {
-            probe = (high+low)/2;
-            if(songs[probe].getTitle().compareTo(title) > 0) {
-                high = probe;
-            } else {
-                low = probe;
-            }
-        }
-        if((low >= 0) && (songs[low].getTitle().compareTo(title) == 0)) {
-            return low;
-        } else {
-            return -1;
-        }
-    }
-    private static int searchYear(Music[] songs, int year) {
-        int high = songs.length;
-        int low = -1;
-        int probe;
-
-        while(high-low>1) {
-            probe = (high+low)/2;
-            if(songs[probe].getYear() > year) {
-                high = probe;
-            } else {
-                low = probe;
-            }
-        }
-        if((low >= 0) && (songs[low].getYear() == year)) {
-            return low;
-        } else {
-            return -1;
-        }
-    }
-    private static int searchArtist(Music[] songs, String artist) {
-        int high = songs.length;
-        int low = -1;
-        int probe;
-
-        while(high-low>1) {
-            probe = (high+low)/2;
-            if(songs[probe].getArtist().compareTo(artist) > 0) {
-                high = probe;
-            } else {
-                low = probe;
-            }
-        }
-        if((low >= 0) && (songs[low].getArtist().compareTo(artist) == 0)) {
-            return low;
-        } else {
-            return -1;
-        }
-    }
     public static void main(String[] args) {
         Music[] songs = {new Music("Dreamer", 2022, "Throttle"),
                          new Music("Japan", 2022, "Throttle"),
@@ -178,20 +122,6 @@ public class MusicTest2 {
        //with results
        printAll(songs);
        System.out.println();
-       searchTitle(songs, "All I Want");
-       System.out.println();
-       searchYear(songs, 2024);
-       System.out.println();
-       searchArtist(songs, "Throttle");
-       System.out.println();
-
-       //without results
-       searchTitle(songs, "Where U Are");
-       System.out.println();
-       searchYear(songs, 2020);
-       System.out.println();
-       searchArtist(songs, "Tyler, The Creator");
-       System.out.println();
-
     }
+
 }
