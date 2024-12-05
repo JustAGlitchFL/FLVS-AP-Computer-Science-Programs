@@ -6,7 +6,7 @@ package M8.L2;
  * @version 11/2/24
  *
  */
-public class Music
+public class Music4
 {
     // instance variables
     private int year;
@@ -14,7 +14,7 @@ public class Music
     private String artist;
 
     // Constructor for objects of class Music
-    public Music(String t, int y, String a)
+    public Music4(String t, int y, String a)
     {
         // initialize instance variables
         title = t;
