@@ -1,8 +1,8 @@
 /*
- * Purpose: Array methods
+ * Purpose:
  * 
- * Aidan Procopio
- * 12/12/24
+ * < your name >
+ * < today's date >
  * 
  * In Activity 4, modify this class to include the methods:
  *    getCount

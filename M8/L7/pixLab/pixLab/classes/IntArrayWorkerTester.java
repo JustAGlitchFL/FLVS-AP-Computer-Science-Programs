@@ -1,5 +1,5 @@
 /*
- * Purpose: Test the IntArrayWorker class
+ * Purpose:
  * 
  * < your name >
  * < today's date >
@@ -96,8 +96,6 @@ public class IntArrayWorkerTester
    System.out.println("Total for column 1 should be 7 and is " + total);
    total = worker.getColTotal(2);
    System.out.println("Total for column 2 should be 9 and is " + total);
-
-  DigitalPicture pic = new Picture();
  }
   
   public static void main(String[] args)
