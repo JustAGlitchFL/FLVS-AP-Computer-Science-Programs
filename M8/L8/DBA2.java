@@ -6,16 +6,16 @@ package M8.L8;
  */
 
 import java.util.ArrayList;
-public class DBA {
+public class DBA2 {
     public static int[][] calcmagicmath(int[] rowH, int[] colH) {
-        int[][] array = new int[colH.length+1][rowH.length];
-        int lastColHeader = (int)(Math.random()*28)+3;
-        for (int i=0; i<colH.length+1; i++) {
-            for (int j=0; j<rowH.length; j++) {
-                if (i == colH.length) {
-                    array[i][j] = rowH[j] * lastColHeader;
+        int[][] array = new int[rowH.length][colH.length + 1];
+        int lastColHeader = (int)(Math.random() * 28) + 3;
+        for (int i = 0; i < rowH.length; i++) {
+            for (int j = 0; j < colH.length + 1; j++) {
+                if (j == colH.length) {
+                    array[i][j] = rowH[i] * lastColHeader;
                 } else {
-                    array[i][j] = colH[i] * rowH[j];
+                    array[i][j] = colH[j] * rowH[i];
                 }
             }
         }
